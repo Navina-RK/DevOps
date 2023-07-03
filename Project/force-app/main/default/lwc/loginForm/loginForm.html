@@ -1,0 +1,22 @@
+<template>
+    <div>
+        <lightning-card>
+        <lightning-record-edit-form object-api-name="Lead" onsuccess={handleSuccess}>
+            <lightning-input-field field-name="Name"> </lightning-input-field>
+            <lightning-input-field field-name="Email"> </lightning-input-field>
+            <lightning-input-field field-name="Company"> </lightning-input-field>
+            <lightning-input-field field-name="Phone"> </lightning-input-field>
+            <lightning-input-field field-name="	Status">
+            </lightning-input-field>
+            <lightning-button
+                type="submit"
+                name="submit"
+                label="Login"
+                onclick={disableList}
+            >
+            </lightning-button>
+        </lightning-record-edit-form>
+         <c-book-detail disabled={disableChildList} field-id={fieldId}></c-book-detail>
+        </lightning-card>
+        </div>
+</template>
